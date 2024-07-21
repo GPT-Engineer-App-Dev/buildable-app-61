@@ -1,30 +1,30 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
-const Index = () => {
+const GirlProfile = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="bg-gray-800 text-white p-4">
-        <h1 className="text-2xl font-bold">My Application</h1>
-      </header>
-
-      <main className="flex-grow p-4">
-        <Card className="max-w-md mx-auto">
-          <CardHeader>
-            <CardTitle>Welcome</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="mb-4">This is a bare-bones application. Start building your content here.</p>
-            <Button>Get Started</Button>
-          </CardContent>
-        </Card>
-      </main>
-
-      <footer className="bg-gray-200 p-4 text-center">
-        <p>&copy; 2023 My Application. All rights reserved.</p>
-      </footer>
-    </div>
+    <Card className="w-[300px] mx-auto">
+      <CardHeader className="flex items-center">
+        <Avatar className="w-24 h-24">
+          <AvatarImage src="https://example.com/girl-avatar.jpg" alt="Girl's avatar" />
+          <AvatarFallback>GR</AvatarFallback>
+        </Avatar>
+      </CardHeader>
+      <CardContent>
+        <h2 className="text-2xl font-bold text-center mb-2">Sarah Johnson</h2>
+        <p className="text-center text-gray-600 mb-4">16 years old</p>
+        <div className="flex flex-wrap justify-center gap-2">
+          <Badge>Student</Badge>
+          <Badge variant="secondary">Artist</Badge>
+          <Badge variant="outline">Volleyball Player</Badge>
+        </div>
+        <p className="mt-4 text-center">
+          Hi! I'm Sarah. I love art, playing volleyball, and hanging out with my friends.
+        </p>
+      </CardContent>
+    </Card>
   );
 };
 
-export default Index;
+export default GirlProfile;
